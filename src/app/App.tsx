@@ -30,7 +30,7 @@ const App = () => {
 			<>
 				<video
 					style={styles.video}
-					src={require("../assets/background-video.mp4")}
+					src={require("../assets/background-video-3.mp4")}
 					autoPlay
 					loop
 					muted
@@ -44,7 +44,7 @@ const App = () => {
 		return (
 			<NavigationContainer theme={{ colors: { background: "#212121" } }}>
 				<Animated.View style={{ ...styles.container, ...{ opacity: fadeAnimation } }}>
-					{authenticated ? <HomeStack /> : <AuthStack />}
+					<HomeStack />
 				</Animated.View>
 			</NavigationContainer>
 		);

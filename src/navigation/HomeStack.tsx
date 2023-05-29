@@ -2,6 +2,7 @@ import React from "react";
 import { DrawerNavigation } from "../components/navigation/Drawer/DrawerNavigation";
 import { BarNavigation } from "../components/navigation/Bar/BarNavigation";
 import { useWindowDimensions } from "react-native";
+import { Dashboard } from "../screens/Main/Dashboard";
 
 export const HomeStack = () => {
 	const isLarge = () => {
@@ -10,5 +11,5 @@ export const HomeStack = () => {
 		return screenWidth > 600;
 	};
 
-	return isLarge() ? <BarNavigation /> : <DrawerNavigation />;
+	return <Dashboard />;
 };

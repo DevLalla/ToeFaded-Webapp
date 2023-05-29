@@ -1,51 +1,20 @@
 import React, { useEffect } from "react";
 import { View, Text, StyleSheet, Image, ScrollView, TouchableHighlight } from "react-native";
-import { postsStore } from "../../app/stores/Posts";
-import { PostCard } from "../../components/PostCard";
-import { useAuthentication } from "../../app/hooks/firebase/useAuthentication";
-import { usePosts } from "../../services/firebase/usePosts";
 
 export const Dashboard = () => {
-	const { getAllPosts } = usePosts();
-	const { userSignOut } = useAuthentication();
-	const posts = postsStore((state) => state.posts);
-
 	useEffect(() => {
-		getAllPosts();
+		document.title = "Toe Fade It";
 	}, []);
 
 	return (
 		<View style={styles.background}>
-			<TouchableHighlight
-				underlayColor={"transparent"}
-				onPress={() => {
-					userSignOut();
-					alert("User Signed Out");
-				}}
-			>
+			<TouchableHighlight underlayColor={"transparent"}>
 				<Image
 					style={styles.image}
-					source={require("../../assets/icon-white-bg.svg")}
+					source={require("../../assets/icon-black-bg.png")}
 				/>
 			</TouchableHighlight>
-			<Text style={styles.screenName}>Dashboard</Text>
-			<ScrollView
-				style={styles.scroll}
-				contentContainerStyle={{
-					alignItems: "center",
-				}}
-			>
-				{posts.length > 0 &&
-					posts.map((post, index) => {
-						return (
-							<PostCard
-								key={index}
-								index={index}
-								postInfo={post}
-							/>
-						);
-					})}
-			</ScrollView>
+			<Text style={styles.screenName}>Website Under Construction</Text>
 		</View>
 	);
 };
@@ -54,6 +23,7 @@ const styles = StyleSheet.create({
 	background: {
 		flex: 1,
 		backgroundColor: "transparent",
+		justifyContent: "center",
 	},
 	scroll: {
 		flexDirection: "column",
@@ -62,8 +32,8 @@ const styles = StyleSheet.create({
 	},
 	image: {
 		marginTop: 20,
-		width: 50,
-		height: 50,
+		width: 100,
+		height: 100,
 		resizeMode: "contain",
 		alignSelf: "center",
 	},
@@ -71,6 +41,6 @@ const styles = StyleSheet.create({
 		margin: 16,
 		alignSelf: "center",
 		color: "white",
-		fontWeight: "500",
+		fontWeight: "700",
 	},
 });

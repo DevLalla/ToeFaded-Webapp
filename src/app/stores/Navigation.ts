@@ -19,9 +19,9 @@ export const navigationStore = create<State & Action>((set) => ({
 	currentScreen: ScreenComponent.Dashboard,
 	screenList: [
 		ScreenComponent.Dashboard,
-		ScreenComponent.Products,
-		ScreenComponent.Contact,
-		ScreenComponent.Blog,
+		// ScreenComponent.Products,
+		// ScreenComponent.Contact,
+		// ScreenComponent.Blog,
 	],
 
 	updatescreenList: (data) =>
