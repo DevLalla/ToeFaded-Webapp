@@ -5,10 +5,10 @@ export const Products = () => {
 	return (
 		<View style={styles.background}>
 			<TouchableHighlight underlayColor={"transparent"}>
-				<Image
+				{/* <Image
 					style={styles.image}
 					source={require("../../assets/icon-white-bg.svg")}
-				/>
+				/> */}
 			</TouchableHighlight>
 			<Text style={styles.screenName}>Products</Text>
 		</View>

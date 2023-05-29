@@ -11,5 +11,5 @@ export const HomeStack = () => {
 		return screenWidth > 600;
 	};
 
-	return <Dashboard />;
+	return <BarNavigation />;
 };

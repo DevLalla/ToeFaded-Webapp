@@ -2,10 +2,6 @@ import React, { useEffect } from "react";
 import { View, Text, StyleSheet, Image, ScrollView, TouchableHighlight } from "react-native";
 
 export const Dashboard = () => {
-	useEffect(() => {
-		document.title = "Toe Fade It";
-	}, []);
-
 	return (
 		<View style={styles.background}>
 			<TouchableHighlight underlayColor={"transparent"}>
@@ -14,7 +10,7 @@ export const Dashboard = () => {
 					source={require("../../assets/icon-black-bg.png")}
 				/>
 			</TouchableHighlight>
-			<Text style={styles.screenName}>Website Under Construction</Text>
+			<Text style={styles.screenName}>Coming Soon</Text>
 		</View>
 	);
 };

@@ -9,30 +9,24 @@ const Stack = createStackNavigator();
 export const BarNavigation = () => {
 	const nav = navigationStore((state) => state);
 	return (
-		<>
-			<NavBar
-				darkMode
-				screens={nav.screenList}
-			/>
-			<Stack.Navigator
-				initialRouteName={nav.currentScreen.toString()}
-				screenOptions={{
-					animationEnabled: true,
-					headerShown: false,
-				}}
-			>
-				{nav.screenList.map((screen, index) => {
-					return (
-						<Stack.Screen
-							key={index}
-							name={screen.toString()}
-							component={NavScreenBuilder(screen)}
-							options={{ title: screen.toString() }}
-							// initialParams={{ screenName: screen }}
-						/>
-					);
-				})}
-			</Stack.Navigator>
-		</>
+		<Stack.Navigator
+			initialRouteName={nav.currentScreen.toString()}
+			screenOptions={{
+				animationEnabled: true,
+				headerShown: false,
+			}}
+		>
+			{nav.screenList.map((screen, index) => {
+				return (
+					<Stack.Screen
+						key={index}
+						name={screen.toString()}
+						component={NavScreenBuilder(screen)}
+						options={{ title: screen.toString() }}
+						// initialParams={{ screenName: screen }}
+					/>
+				);
+			})}
+		</Stack.Navigator>
 	);
 };

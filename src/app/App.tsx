@@ -42,7 +42,7 @@ const App = () => {
 
 	const Container = () => {
 		return (
-			<NavigationContainer theme={{ colors: { background: "#212121" } }}>
+			<NavigationContainer theme={{ colors: { background: "transparent" } }}>
 				<Animated.View style={{ ...styles.container, ...{ opacity: fadeAnimation } }}>
 					<HomeStack />
 				</Animated.View>
