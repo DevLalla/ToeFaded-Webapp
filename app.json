@@ -1,0 +1,37 @@
+{
+	"expo": {
+		"name": "template",
+		"slug": "rnw-template",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./src/assets/icon-black-bg.png",
+		"userInterfaceStyle": "light",
+		"splash": {
+			"image": "./src/assets/icon-black-bg.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#000"
+		},
+		"assetBundlePatterns": ["**/*"],
+		"ios": {
+			"supportsTablet": true
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./src/assets/icon-black-bg.png",
+				"backgroundColor": "#000"
+			},
+			"softwareKeyboardLayoutMode": "pan"
+		},
+		"web": {
+			"name": "rnw-template",
+			"shortName": "template",
+			"favicon": "./src/assets/icon-black-bg.png",
+			"background_color": "#000",
+			"display": "fullscreen",
+			"theme_color": "#000",
+			"lang": "en",
+			"start_url": "/?utm_source=web_app_manifest",
+			"orientation": "portrait"
+		}
+	}
+}

@@ -1,0 +1,77 @@
+{
+	"env": {
+		"es2021": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier",
+		"prettier/react"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module",
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["@typescript-eslint"],
+	"rules": {
+		"no-trailing-spaces": ["error"],
+		"no-unreachable": ["error"],
+		"no-lonely-if": ["error"],
+		"linebreak-style": ["error", "unix"],
+		"quotes": ["error", "double"],
+		"semi": ["error", "always"],
+		"indent": [
+			"error",
+			4,
+			{
+				"SwitchCase": 1
+			}
+		],
+		"padding-line-between-statements": [
+			"error",
+			{
+				"blankLine": "always",
+				"prev": ["const", "let", "var"],
+				"next": "*"
+			},
+			{
+				"blankLine": "never",
+				"prev": ["const", "let", "var"],
+				"next": ["const", "let", "var"]
+			},
+			{
+				"blankLine": "always",
+				"prev": ["function", "block-like"],
+				"next": "*"
+			},
+			{
+				"blankLine": "always",
+				"prev": ["*"],
+				"next": ["function", "block-like"]
+			},
+			{
+				"blankLine": "any",
+				"prev": ["import"],
+				"next": ["import"]
+			}
+		]
+	},
+	"overrides": [
+		{
+			// enable the rule specifically for TypeScript files
+			"files": ["*.ts", "*.tsx"],
+			"rules": {
+				"@typescript-eslint/explicit-module-boundary-types": "off",
+				"@typescript-eslint/no-explicit-any": ["error"],
+				"@typescript-eslint/no-namespace": "off"
+			}
+		}
+	]
+}
