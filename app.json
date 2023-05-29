@@ -1,7 +1,7 @@
 {
 	"expo": {
-		"name": "template",
-		"slug": "rnw-template",
+		"name": "toefadeit",
+		"slug": "toe-fade-it",
 		"version": "1.0.0",
 		"orientation": "portrait",
 		"icon": "./src/assets/icon-black-bg.png",
@@ -23,7 +23,7 @@
 			"softwareKeyboardLayoutMode": "pan"
 		},
 		"web": {
-			"name": "rnw-template",
+			"name": "Toe Fade It",
 			"shortName": "template",
 			"favicon": "./src/assets/icon-black-bg.png",
 			"background_color": "#000",
